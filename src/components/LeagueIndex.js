@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { SportmonksApi } from 'sportmonks';
+import LeagueIndexItem from './LeagueIndexItem';
 
 class LeagueIndex extends Component {
   state = { leagues: [] };
@@ -22,7 +23,7 @@ class LeagueIndex extends Component {
         <p>{ leagues.length }</p>
         {
           leagues.map(league =>(
-            <div key={league.id}>{ league.name }</div>
+            <LeagueIndexItem key={league.id} league={ league } />
           ))
         }
       </div>
