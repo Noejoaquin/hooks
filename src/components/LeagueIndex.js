@@ -22,9 +22,11 @@ class LeagueIndex extends Component {
        LEAGUE INDEX
         <p>{ leagues.length }</p>
         {
-          leagues.map(league =>(
-            <LeagueIndexItem key={league.id} league={ league } />
-          ))
+          leagues.map(league => {
+            if (league.name === "Premiership" || league.name === "Superliga") {
+              return <LeagueIndexItem key={league.id} league={league}/>
+            }
+          })
         }
       </div>
     );
