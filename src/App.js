@@ -7,11 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <LeagueIndex />
+        <p>Basic Soccer App</p>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Basic Soccer App
-        </p>
+        <LeagueIndex />
       </header>
     </div>
   );
